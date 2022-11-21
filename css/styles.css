@@ -39,6 +39,7 @@ body {
 	border-radius: 15px;
 	background-color: white;
 	width: 87%;
+	max-width: 390px;
 	overflow: hidden;
 	text-align: left;
 }
@@ -52,7 +53,8 @@ body {
 
 .img {
 	width: 100%;
-	margin-bottom: -50px;
+	height: 100%;
+	margin-bottom: -60px;
 	margin-top: -13px;
 }
 
@@ -97,12 +99,15 @@ body {
 	color: var(--clr-Vdark-grayish-blue);
 	line-height: 2.6rem;
 	max-width: 25ch;
+	margin: 0 auto;
+	padding-bottom: 1rem;
 }
 
 .paragraph {
 	color: var(--clr-desaturated-dark-blue);
 	line-height: 2.2rem;
 	max-width: 31.5ch;
+	margin: 0 auto;
 }
 
 /* Footer */
@@ -132,6 +137,7 @@ body {
 	position: absolute;
 	transform: translateY(10%);
 	width: 87%;
+	max-width: 390px;
 	border-radius: 0 0 10px 10px;
 	margin: 0 auto;
 	justify-items: center;
@@ -148,4 +154,62 @@ body {
 
 .hide {
 	display: none;
+}
+
+/* Desktop screen size */
+
+@media screen and (min-width: 1050px) {
+	.container {
+		display: flex;
+		flex-direction: row;
+		max-width: 850px;
+		max-height: 330px;
+	}
+
+	.img_container {
+		width: 40%;
+		overflow: hidden;
+	}
+
+	.img {
+		width: 125%;
+		height: 100%;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-left: -8px;
+		/*scale: 1.35 1;*/
+	}
+
+	.card-content {
+		width: 60%;
+		padding-left: 5rem;
+	}
+
+	.content {
+		padding: 4rem 0 3rem;
+		margin: 0 auto;
+	}
+
+	.header {
+		font-size: 2rem;
+		margin: 0;
+		max-width: 26ch;
+		padding-bottom: 0;
+	}
+
+	.paragraph {
+		margin: 1.5rem 0;
+		max-width: 45ch;
+	}
+
+	.footer-content {
+		margin: 0;
+		justify-content: flex-start;
+		padding: 0;
+	}
+
+	.share_btn {
+		margin-left: 17rem;
+	}
 }
