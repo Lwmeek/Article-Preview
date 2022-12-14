@@ -11,11 +11,17 @@ shareBtn.forEach((share) => {
 		if (window.innerWidth >= 1050) {
 			footerTwo.classList?.toggle("hide");
 			footerTwo.classList?.toggle("show");
-			btnPrimary.classList?.toggle("btn-secondary");
 		} else {
-			console.log("clicked");
 			footerTwo.classList?.toggle("show");
 			footerTwo.classList?.toggle("hide");
+		}
+
+		if (footerTwo.classList?.contains("show")) {
+			btnPrimary.classList?.add("btn-secondary");
+			console.log("yes");
+		} else {
+			btnPrimary.classList?.remove("btn-secondary");
+			console.log("no");
 		}
 	});
 });
